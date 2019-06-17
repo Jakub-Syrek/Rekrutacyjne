@@ -17,24 +17,24 @@ namespace ZadanieRekrutacyjne6
             //System.DateTime
             Console.WriteLine($"{t.GetType().ToString()} after initialisation is declared with default value of :'{t.ToString()}' {"\r\n"}which means it is not null or empty.");
             Console.WriteLine(s ?? "s is null");
-            //s is null and reference type needs to be declared
+            Console.WriteLine($"String s is null and reference type needs to be declared.Contrary to value types,every string instance is distinct,{"\r\n"}and every single time when string is created new string is built and new memory is allocated on the heap");
             //The null-coalescing operator ?? returns the value of its left-hand operand if it isn't null; otherwise, it evaluates the right-hand operand and returns its result. 
-           
+
             if (string.IsNullOrEmpty(s))
             {
-                Console.WriteLine("String s is null valued and needs to be declared");
-                Console.ReadKey();
-                Console.WriteLine($@"Declaring empty string  s ='' ");
-                
-                s = "" ;
-                
+                Console.ReadLine();
+
+                Console.WriteLine($"Declaring empty string  s =\"\" ");
+
+                s = "";
+
                 //Testing wheter empty string will be accepted
                 if (string.IsNullOrEmpty(s))
                 {
                     Console.WriteLine(s == null ? "s is null" : $"s is {s.Length} chracter long, and now it has a type:{s.GetType().ToString()}");
-                    Console.ReadKey();
+                    Console.ReadLine();
                     //Declaring string with one char
-                    Console.WriteLine($@"Declaring one char long string  s =' '   ");
+                    Console.WriteLine($"Declaring one char long string  s =\" \"   ");
                     s = " ";
                     Console.WriteLine($"string s length = {s.Length}");
                     //Testinghow the string behaves now
@@ -44,12 +44,12 @@ namespace ZadanieRekrutacyjne6
                 {
                     Console.WriteLine(s == null ? "s is null" : $"s is {s.Length} chracter long, and now it has a type:{s.GetType().ToString()}");
                 }
-                   
+
             }
             else
             {
                 Console.WriteLine(s == null ? "s is null" : $"s is {s.Length} chracter long, and now it has a type:{s.GetType().ToString()}");
-            }           
+            }
             Console.ReadKey();
         }
     }
